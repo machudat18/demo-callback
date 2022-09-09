@@ -3,6 +3,6 @@ class Quest {
 
   Quest(this.name);
 
-  List<String> answer = ["A", "B", "C"];
+  List<String> listAnswer = ["A", "B", "C"];
   String selected = "";
 }

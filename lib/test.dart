@@ -27,12 +27,12 @@ class _DemoTestStatefulState extends State<DemoTestStateful> {
   }
 
   List<Widget> _getFloatButton(Quest quest) {
-    return quest.answer.map((e) => FloatingActionButton(
+    return quest.listAnswer.map((answer) => FloatingActionButton(
             onPressed: () {
-              _update(e);
+              _update(answer);
             },
-            backgroundColor: e == quest.selected ? Colors.red : Colors.blue,
-            child: Text(e)))
+            backgroundColor: answer == quest.selected ? Colors.red : Colors.blue,
+            child: Text(answer)))
         .toList();
   }
 

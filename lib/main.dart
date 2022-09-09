@@ -25,7 +25,6 @@ class MyApp extends StatelessWidget {
 class MyHomePage extends StatefulWidget {
   const MyHomePage({Key? key, required this.title}) : super(key: key);
 
-
   final String title;
 
   @override
@@ -38,7 +37,7 @@ class _MyHomePageState extends State<MyHomePage> {
   final Quest quest3 = Quest("Quest3");
 
   void _incrementCounter() {
-      debugPrint("${quest1.name}${quest1.selected} , ${quest2.name}${quest2.selected} , ${quest3.name}${quest3.selected} ,");
+    debugPrint("${quest1.name}${quest1.selected} , ${quest2.name}${quest2.selected} , ${quest3.name}${quest3.selected} ,");
   }
 
   @override
@@ -52,7 +51,8 @@ class _MyHomePageState extends State<MyHomePage> {
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
             DemoTestStateful(
-              quest1, (selected) {
+              quest1,
+              (selected) {
                 quest1.selected = selected;
                 // setState(() {
                 //
@@ -60,20 +60,22 @@ class _MyHomePageState extends State<MyHomePage> {
               },
             ),
             DemoTestStateful(
-              quest2, (selected) {
-              quest2.selected = selected;
-              // setState(() {
-              //
-              // });
-            },
+              quest2,
+              (selected) {
+                quest2.selected = selected;
+                // setState(() {
+                //
+                // });
+              },
             ),
             DemoTestStateful(
-              quest3, (selected) {
-              quest3.selected = selected;
-              // setState(() {
-              //
-              // });
-            },
+              quest3,
+              (selected) {
+                quest3.selected = selected;
+                // setState(() {
+                //
+                // });
+              },
             )
           ],
         ),
